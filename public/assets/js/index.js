@@ -134,8 +134,6 @@ const renderNoteList = (notes) => {
 
   $noteList.append(noteListItems);
 };
-
-// Gets notes from the db and renders them to the sidebar
 const getAndRenderNotes = () => {
   return getNotes().then(renderNoteList);
 };
@@ -147,5 +145,4 @@ $noteList.on("click", ".delete-note", handleNoteDelete);
 $noteTitle.on("keyup", handleRenderSaveBtn);
 $noteText.on("keyup", handleRenderSaveBtn);
 
-// Gets and renders the initial list of notes
 getAndRenderNotes();
